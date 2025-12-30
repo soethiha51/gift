@@ -2,7 +2,7 @@
 <html>
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>6 Mystery Boxes 🎁</title>
+  <title>New Year Present 🎁</title>
   <style>
     body {
       text-align: center;
@@ -133,16 +133,16 @@
 </head>
 <body>
 
-<h1>Stronger Every Day – Just for You 💖 </h1>
+<h1>Stronger Every Day <br>– Just for You 💖 </h1>
 <p>No pressure, just love 💕</p>
 
 <div class="box-container">
-  <div class="box box1" onclick="openModal(0)">🎁</div>
-  <div class="box box2" onclick="openModal(1)">🎁</div>
-  <div class="box box3" onclick="openModal(2)">🎁</div>
-  <div class="box box4" onclick="openModal(3)">🎁</div>
-  <div class="box box5" onclick="openModal(4)">🎁</div>
-  <div class="box box6" onclick="openModal(5)">🎁</div>
+  <div class="box box1" onclick="openModal()">🎁</div>
+  <div class="box box2" onclick="openModal()">🎁</div>
+  <div class="box box3" onclick="openModal()">🎁</div>
+  <div class="box box4" onclick="openModal()">🎁</div>
+  <div class="box box5" onclick="openModal()">🎁</div>
+  <div class="box box6" onclick="openModal()">🎁</div>
 </div>
 
 <div class="overlay" id="overlay" onclick="closeModal()"></div>
@@ -162,7 +162,8 @@
   const overlay = document.getElementById("overlay");
 
   function openModal(index) {
-    modal.textContent = messages[index];
+    const randomIndex = Math.floor(Math.random() * messages.length);
+    modal.textContent = messages[randomIndex];
     modal.classList.add("show");
     overlay.classList.add("show");
     burst();
